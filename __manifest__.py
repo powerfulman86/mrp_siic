@@ -8,7 +8,9 @@
     'category': 'Manufacturing/Manufacturing',
     'depends': ['mrp'],
     'data': [
-
+        'security/ir.model.access.csv',
+        'security/ir_rule.xml',
+        'views/mrp_views.xml',
     ],
     'images': ['static/description/icon.png'],
     'license': 'AGPL-3',

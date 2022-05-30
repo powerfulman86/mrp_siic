@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mrp_order_branch_rule" model="ir.rule">
+            <field name="name">branch Orders</field>
+            <field name="model_id" ref="model_mrp_production"/>
+            <field name="domain_force">[('branch_id','=',user.branch_id.id)]</field>
+            <field name="groups" eval="[(4, ref('mrp.group_mrp_user'))]"/>
+        </record>
+
+        <record id="mrp_order_branch_all_rule" model="ir.rule">
+            <field name="name">All branchs Orders</field>
+            <field name="model_id" ref="model_mrp_production"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('mrp.group_mrp_manager'))]"/>
+        </record>
+
+    </data>
+</odoo>
