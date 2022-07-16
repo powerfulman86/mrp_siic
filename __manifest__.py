@@ -11,6 +11,7 @@
         'security/ir.model.access.csv',
         'security/ir_rule.xml',
         'views/mrp_views.xml',
+        'views/mrp_unbuild.xml',
     ],
     'images': ['static/description/icon.png'],
     'license': 'AGPL-3',
