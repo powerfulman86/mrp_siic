@@ -16,10 +16,9 @@ class MrpUnbuild(models.Model):
     branch_id = fields.Many2one(comodel_name="res.branch", string="Branch", required=True, readonly=True, tracking=1,
                                 index=True, help='This is branch to set', states={'draft': [('readonly', False)]},
                                 default=_get_branch)
-    mo_id = fields.Many2one(
-        'mrp.production', 'Manufacturing Order',
-        domain="[('state', 'in', ['done', 'cancel']), ('company_id', '=', company_id),('branch_id','=',branch_id)]",
-        states={'done': [('readonly', True)]}, check_company=True)
+    mo_id = fields.Many2one('mrp.production', 'Manufacturing Order', required=True,
+                            domain="[('state', 'in', ['done', 'cancel']), ('company_id', '=', company_id),('branch_id','=',branch_id)]",
+                            states={'done': [('readonly', True)]}, check_company=True)
     location_id = fields.Many2one(
         'stock.location', 'Source Location',
         domain="[('usage','=','internal'), '|', ('company_id', '=', False), ('company_id', '=', company_id),('branch_id','=',branch_id)]",
@@ -40,4 +39,4 @@ class MrpUnbuild(models.Model):
             self.product_uom_id = self.mo_id.product_uom_id
             self.bom_id = self.mo_id.bom_id
             self.location_id = self.mo_id.location_dest_id
-            self.location_dest_id = self.mo_id.location_id
+            self.location_dest_id = self.mo_id.location_src_id
