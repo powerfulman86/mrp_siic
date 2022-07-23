@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_siic
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-23 08:38+0000\n"
+"PO-Revision-Date: 2022-07-23 08:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_siic
+#: model_terms:ir.ui.view,arch_db:mrp_siic.mrp_production_template_siic
+msgid "Barcode"
+msgstr "باركود"
+
+#. module: mrp_siic
+#: model:ir.model.fields,field_description:mrp_siic.field_mrp_production__branch_id
+#: model:ir.model.fields,field_description:mrp_siic.field_mrp_unbuild__branch_id
+msgid "Branch"
+msgstr "المصنع"
+
+#. module: mrp_siic
+#: model:ir.model.fields,field_description:mrp_siic.field_mrp_production__location_src_id
+msgid "Components Location"
+msgstr "مكان الكونات"
+
+#. module: mrp_siic
+#: model:ir.model.fields,field_description:mrp_siic.field_mrp_unbuild__location_dest_id
+msgid "Destination Location"
+msgstr "الوجهة"
+
+#. module: mrp_siic
+#: model_terms:ir.ui.view,arch_db:mrp_siic.mrp_production_template_siic
+msgid "Finished Products"
+msgstr "المنتجات النهائيه"
+
+#. module: mrp_siic
+#: model:ir.model.fields,field_description:mrp_siic.field_mrp_production__location_dest_id
+msgid "Finished Products Location"
+msgstr "موقع المنتجات المنتهية"
+
+#. module: mrp_siic
+#: model:ir.model.fields,help:mrp_siic.field_mrp_unbuild__location_id
+msgid "Location where the product you want to unbuild is."
+msgstr ""
+
+#. module: mrp_siic
+#: model:ir.model.fields,help:mrp_siic.field_mrp_production__location_src_id
+msgid "Location where the system will look for components."
+msgstr "المكان الذي سيبدأ النظام البحث عن مكوناته."
+
+#. module: mrp_siic
+#: model:ir.model.fields,help:mrp_siic.field_mrp_production__location_dest_id
+msgid "Location where the system will stock the finished products."
+msgstr "الموقع الذي سيتم فيه تخزين المنتجات النهائية."
+
+#. module: mrp_siic
+#: model:ir.model.fields,help:mrp_siic.field_mrp_unbuild__location_dest_id
+msgid ""
+"Location where you want to send the components resulting from the unbuild "
+"order."
+msgstr ""
+
+#. module: mrp_siic
+#: model:ir.model.fields,field_description:mrp_siic.field_mrp_unbuild__mo_id
+msgid "Manufacturing Order"
+msgstr "أمر التصنيع"
+
+#. module: mrp_siic
+#: model:ir.model.fields,field_description:mrp_siic.field_mrp_production__picking_type_id
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: mrp_siic
+#: model_terms:ir.ui.view,arch_db:mrp_siic.mrp_production_template_siic
+msgid "Product"
+msgstr "المنتج"
+
+#. module: mrp_siic
+#: model:ir.model,name:mrp_siic.model_mrp_production
+msgid "Production Order"
+msgstr "أمر الانتاج"
+
+#. module: mrp_siic
+#: model_terms:ir.ui.view,arch_db:mrp_siic.mrp_production_template_siic
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: mrp_siic
+#: model:ir.model.fields,field_description:mrp_siic.field_mrp_unbuild__location_id
+msgid "Source Location"
+msgstr "مكان المورد"
+
+#. module: mrp_siic
+#: model:ir.model.fields,help:mrp_siic.field_mrp_production__branch_id
+#: model:ir.model.fields,help:mrp_siic.field_mrp_unbuild__branch_id
+msgid "This is branch to set"
+msgstr "يجب اختيار المصنع"
+
+#. module: mrp_siic
+#: model:ir.model,name:mrp_siic.model_mrp_unbuild
+msgid "Unbuild Order"
+msgstr "أمر الهدم"
