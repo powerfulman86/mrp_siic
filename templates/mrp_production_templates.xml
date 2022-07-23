@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="mrp_production_template_siic" inherit_id="mrp.report_mrporder">
+            <div>
+                <t t-if="o.finished_move_line_ids">
+                    <h3>
+                        Finished Products
+                    </h3>
+                </t>
+
+                <table class="table table-sm" t-if="o.finished_move_line_ids">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th t-attf-class="{{ 'text-right' if not has_product_barcode else '' }}">Quantity</th>
+                            <th t-if="has_product_barcode" width="15%" class="text-center">Barcode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-if="o.finished_move_line_ids">
+                            <tr t-foreach="o.finished_move_line_ids" t-as="raw_line">
+                                <td>
+                                    <span t-field="raw_line.product_id"/>
+                                </td>
+                                <td t-attf-class="{{ 'text-right' if not has_product_barcode else '' }}">
+                                    <span t-field="raw_line.qty_done"/>
+                                    <span t-field="raw_line.product_uom_id" groups="uom.group_uom"/>
+                                </td>
+                                <td t-if="has_product_barcode" width="15%" class="text-center">
+                                    <t t-if="raw_line.product_id.barcode">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', raw_line.product_id.barcode, 600, 100)"
+                                             style="width:100%;height:35px" alt="Barcode"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+
+
+    </data>
+</odoo>

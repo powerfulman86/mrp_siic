@@ -12,6 +12,7 @@
         'security/ir_rule.xml',
         'views/mrp_views.xml',
         'views/mrp_unbuild.xml',
+        'templates/mrp_production_templates.xml',
     ],
     'images': ['static/description/icon.png'],
     'license': 'AGPL-3',
